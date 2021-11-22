@@ -7,9 +7,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class HumanTest {
 
     @Test
-    void createHumanTest(){
+    void createHumanWithWrongTest(){
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
-                () -> new Human("Sanyi Bacsi", 121));
+                () -> new Human("Sanyi Bacsi", 1900));
         assertEquals("Az eletkor nem lehet tobb 120-nal.",exception.getMessage());
 
 
@@ -18,7 +18,7 @@ class HumanTest {
     @Test
     void createHumanTest2(){
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
-                () -> new Human("Sanyi", 119));
+                () -> new Human("Sanyi", 1910));
         assertEquals("A nev minimumm 2 tagu kell hogy legyen!",exception.getMessage());
 
 

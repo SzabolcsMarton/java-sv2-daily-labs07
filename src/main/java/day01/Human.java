@@ -9,7 +9,7 @@ public class Human {
 
     private int yearOfBirth;
 
-    public Human(String name, int age) {
+    public Human(String name, int yearOfBirth) {
         if (name.split(" ").length < 2) {
             throw new IllegalArgumentException("A nev minimumm 2 tagu kell hogy legyen!");
         }
@@ -17,7 +17,7 @@ public class Human {
         if (LocalDateTime.now().getYear() - yearOfBirth > 120) {
             throw new IllegalArgumentException("Az eletkor nem lehet tobb 120-nal.");
         }
-        this.yearOfBirth = age;
+        this.yearOfBirth = yearOfBirth;
 
     }
 
